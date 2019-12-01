@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   def assign_customer_id
     customer = Stripe::Customer.create(email: email)
-    self.customer_id = customer.id
+    self.update(customer_id: customer.id)
   end
 
 end

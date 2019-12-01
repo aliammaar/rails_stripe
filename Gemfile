@@ -11,6 +11,7 @@ gem 'puma', '~> 3.11'
 gem 'rails', '~> 6.0.2.rc1'
 gem 'stripe'
 gem 'sass-rails', '~> 5'
+gem 'stripe_event'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 
@@ -28,5 +29,6 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'stripe-ruby-mock'
   gem 'webdrivers'
 end

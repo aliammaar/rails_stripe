@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :products
+  root to: 'products#index'
+
+  devise_for :users
+
   resources :credit_cards
-  devise_for :users, controllers: {
-    # sessions: 'users/sessions'
-  }
+  resources :products
+  resources :charges
+
+  mount StripeEvent::Engine, at: '/payments'
 
 end
